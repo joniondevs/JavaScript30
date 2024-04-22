@@ -79,7 +79,17 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    var map = new Map();
+    for(v of data)
+    {
+      if(map.has(v))
+      {
+        map.set(v, map.get(v) + 1)
+      }else{
+        map.set(v, 0);
+      }
+    }
+    console.log(map);
   </script>
 </body>
 </html>
