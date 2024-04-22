@@ -66,6 +66,15 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    function makePerson(personName)
+    {
+      let tokens = personName.split(", ");
+      return {firstName: tokens[1], lastName: tokens[0]};   
+    }
+    const persons = people.map(p => makePerson(p));
+    console.log(persons);
+    const g = persons.sort((a,b) => a.lastName.localeCompare(b.lastName));
+    console.log(g);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
